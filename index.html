@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VibeApp Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-shell">
+        <div class="live-badge">
+            <span class="dot"></span> LIVE
+        </div>
+
+        <div class="video-feed" id="mainFeed">
+            <section class="video-slide">
+                <video class="video-player" loop autoplay muted onclick="handleVideoClick(this)">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-close-up-1563-large.mp4" type="video/mp4">
+                </video>
+
+                <aside class="interaction-bar">
+                    <div class="user-avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Charlie" alt="profile">
+                        <div class="follow-plus">+</div>
+                    </div>
+
+                    <div class="icon-stat">
+                        <button class="glass-btn heart" onclick="pulse(this)">❤️</button>
+                        <span>24.5K</span>
+                    </div>
+
+                    <div class="icon-stat">
+                        <button class="glass-btn" onclick="toggleChat()">💬</button>
+                        <span>1.2K</span>
+                    </div>
+
+                    <div class="icon-stat">
+                        <button class="glass-btn share-btn">🚀</button>
+                        <span>Share</span>
+                    </div>
+                </aside>
+
+                <footer class="video-meta">
+                    <h3 class="username">@Charlie_Dev</h3>
+                    <p class="description">Building the new physics engine for Charlie Blocks! 🕹️</p>
+                    <div class="audio-strip">
+                        <span class="music-note">♫</span>
+                        <div class="ticker">Original Sound - Charlie_Dev</div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+
+        <div id="heart-container"></div>
+
+        <div class="chazup-panel" id="chatPanel">
+            <div class="drag-handle"></div>
+            <div class="panel-header">
+                <h3>Live Discussions</h3>
+                <button class="close-btn" onclick="toggleChat()">✕</button>
+            </div>
+            <div class="chat-flow" id="chatFlow">
+                <div class="bubble recipient">This UI is fire! 🔥</div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button class="send-icon" onclick="sendMessage()">➔</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
